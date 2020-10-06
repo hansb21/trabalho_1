@@ -1,5 +1,5 @@
-#ifndef STRUCTURES_LINKED_STACK_H
-#define STRUCTURES_LINKED_STACK_H
+#ifndef STRUCTURES_LINKED_QUEUE_H
+#define STRUCTURES_LINKED_QUEUE_H
 
 #include <cstdint>
 #include <stdexcept>
@@ -9,33 +9,35 @@
 namespace structures {
 
 template<typename T>
-//! Pilha Encadeada.
-class LinkedStack {
+//! Fila Encadeada.
+class LinkedQueue {
  public:
 	//! Destrutor.
-	~LinkedStack();
+	~LinkedQueue();
 
-	//! Empilha.
-	void push(const T& data);
-	//! Desempilha.
-	T pop();
-	//! Acessa o topo da Pilha.
-	T& top() const;
-	//! Confere se a Pilha está vazia.
-	bool empty() const;
-	//! Retorna o tamanho da Pilha.
-	std::size_t size() const;
-	//! Limpa a Pilha.
+	//! Limpa a Fila.
 	void clear();
+	//! Enfileira.
+	void enqueue(const T& data);
+	//! Desenfileira.
+	T dequeue();
+	//! Acessa a frente da Fila.
+	T& front() const;
+	//! Acessa o último da Fila.
+	T& back() const;
+	//! Confere se a Fila está vazia.
+	bool empty() const;
+	//! Retorna o tamanho da Fila.
+	std::size_t size() const;
 
  private:
-	//! Elemento-Nodo da Pilha Encadeada.
+	//! Elemento-Nodo da Fila Encadeada.
 	class Node {
 	 public:
 		//! Construtor apenas com dado.
-		explicit Node(const T& data): data_{data} {}
+		explicit Node(const T& data) : data_{data} {}
 		//! Construtor completo.
-		explicit Node(const T& data, Node* next): data_{data}, next_{next} {}
+		explicit Node(const T& data, Node* next) : data_{data}, next_{next} {}
 
 		//! getter: dado.
 		T& data() { return data_; }
@@ -53,12 +55,13 @@ class LinkedStack {
 		Node* next_{nullptr};
 	};
 
-	Node* top_{nullptr};  //!< Nodo-topo.
+	Node* head_{nullptr};  //!< Nodo-cabeca.
+	Node* tail_{nullptr};  //!< Node-cauda.
 	std::size_t size_{0u};  //!< Tamanho atual.
 };
 
 // implementacao incluida aqui
-#include "linked_stack.cpp"
+#include "linked_queue.c"
 
 }  // namespace structures
 

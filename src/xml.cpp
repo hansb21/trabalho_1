@@ -1,13 +1,19 @@
 #include "linked_stack.h"
+#include <cstddef>
+#include <string>
+
 #define ENDPOSITION  end + 1 - start
 
-namespace {
+
+
+
+namespace xml {
 
 bool verifier(const std::string& xml_file) {
 	
 	structures::LinkedStack<std::string> tags;
 
-	auto counter = 0;
+	auto counter = 0u;
 
 	while (counter < xml_file.length()) 
 	{
@@ -32,9 +38,9 @@ bool verifier(const std::string& xml_file) {
 			if (tags.empty()) return false;
 			else if (tags.top() == tag) tags.pop();
 			else return false;
+			}
 		}
-	}
-	
-	return tags.empty();
-}	
+		return tags.empty();
+	}	
+
 }

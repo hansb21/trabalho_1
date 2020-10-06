@@ -11,7 +11,7 @@
 int main() 
 {
     using namespace std;
-	using namespace xml;
+    using namespace xml;
 
     char xmlfilename[100];
     cin.getline(xmlfilename, 100);
@@ -28,7 +28,7 @@ int main()
 
 	    				
 	
-	//std://std::cout << xmlfilename << std::endl;
+	std::cout << xmlfilename << std::endl;
 
     return (0);
 }
