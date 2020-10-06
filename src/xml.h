@@ -16,7 +16,7 @@ namespace xml {
 	 * @returns: 0 se é valido.
 	 * @returns: 1 se é invalido.
 	 */
-	int verifier(std::string &xml);
+	bool verifier(const std::string &xml);
 
 	
 } 

@@ -1,16 +1,34 @@
 #include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <cctype>
+
+
+#include "xml.h"
+#include "linked_stack.h"
 
 int main() 
 {
+    using namespace std;
+	using namespace xml;
+
     char xmlfilename[100];
+    cin.getline(xmlfilename, 100);
 
-    std::cin >> xmlfilename;
+    ifstream file{xmlfilename};
+	if(!file.is_open()) return 1;
 
-    /*
-    * Codigo =/
-    */
+	stringstream string;
+	string << file.rdbuf();
+	file.close();
+	auto xml = string.str();
 
-    std::cout << xmlfilename << std::endl;
+	if (!verifier(xml)) cout << "error\n";
+
+	    				
+	
+	//std://std::cout << xmlfilename << std::endl;
 
     return (0);
 }
