@@ -38,9 +38,32 @@ bool verifier(const std::string& xml_file) {
 			if (tags.empty()) return false;
 			else if (tags.top() == tag) tags.pop();
 			else return false;
-			}
 		}
-		return tags.empty();
-	}	
+	}
+	return tags.empty();
+}	
 
+std::string extract(const std::string& origin, const std::string& start, 
+		const std::string& end, std::size_t& from)
+{		
+	auto start_pos = origin.find(start, from);
+	const auto end_pos = origin.find(end, start_pos);
+	
+	if (start_pos == std::string::npos || end_pos == std::string::npos)
+	{
+		from = std::string::npos;
+		return "";
+	}
+	
+	from = end_pos + end.length();
+	start_pos += start.length();
+	return origin.substr(start_pos, end_pos - start_pos);
 }
+
+std::string subextractor(const std::string& origin, const std::string& start, const std::string& close)
+{
+	std::size_t pos{0};
+	return extract(origin, start, close, pos);
+}
+
+}  // namespace xml

@@ -19,4 +19,12 @@ namespace xml {
 	bool verifier(const std::string &xml);
 
 	
+	std::string extract(const std::string& origin, const std::string& start, 
+		const std::string& end, std::size_t& from);
+
+	
+	std::string subextractor(const std::string& origin, const std::string& start, const std::string& close);
+
+
 } 
+
