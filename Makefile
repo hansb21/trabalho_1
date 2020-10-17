@@ -7,8 +7,8 @@ TEST_CFLAGS = -fsanitize=leak
 DEBUG_CFLAGS = $(TEST_CFLAGS) -Werror -D DEBUG -O0
 BUILD_CFLAGS = -D NDEBUG -O2
 
-TARGETS = src/main.cpp src/xml.cpp 
-DEPS = $(TARGETS)  src/linked_queue.h src/linked_queue.cpp
+TARGETS = src/main.cpp src/xml.cpp src/counter.cpp
+DEPS = $(TARGETS)  src/linked_queue.h src/linked_queue.cpp src/counter.h
 
 default: $(DEPS)
 	$(CC) $(CFLAGS) $(TEST_CFLAGS) -o $(APP_NAME).out $(TARGETS)

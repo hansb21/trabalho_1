@@ -7,11 +7,13 @@
 
 #include "xml.h"
 #include "linked_stack.h"
+#include "counter.h"
 
 int main() 
 {
     using namespace std;
     using namespace xml;
+	using namespace counter;
 
     char xmlfilename[100];
     cin.getline(xmlfilename, 100);
@@ -28,10 +30,7 @@ int main()
 	{
 		cout << "error\n";
 		return -1;
-
-	} else {
-		cout << "passou\n";
-	}	
+	} 	
 	
 	size_t from{0};
 	while (from < xml.length()) 
@@ -42,13 +41,18 @@ int main()
 	
 		//extrai atributos
 		const auto name = xml::subextractor(img, "<name>", "</name>");
-		cout << "name : " << name << endl;
+		const auto data = subextractor(img, "<data>", "</data>");
 		const auto height = stoi(subextractor(img, "<height>", "</height>"), nullptr);
-		cout << "height :" << height << endl;
 		const auto width = stoi(subextractor(img, "<width>", "</width>"), nullptr);
-		cout << "width : " << width << endl;
+
 		if (height <= 0|| width <= 0) return -2;
-		//processa matrix 
+	
+		//conta as regiões da imagem e printa 
+		bool* matrix = create_matrix(data, width, height);
+		int regions = connectivity_counter(width, height, matrix);
+		delete matrix;
+
+		cout << name << ' ' << regions << endl;
 	}
     return (0);
 }
