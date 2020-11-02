@@ -1,3 +1,9 @@
+/**
+ * @file linked_queue.cpp
+ * @author Hans Buss, André Fernandes
+ * @brief Implementação da linked queue.
+ * 
+ */
 template<typename T>
 LinkedQueue<T>::~LinkedQueue() {
 	clear();

@@ -1,3 +1,9 @@
+/**
+ * @file counter.h
+ * @author Hans Buss, André Fernandes
+ * @brief Implementação das funções usadas para efetuar a contagem de áreas na imagem.
+ * 
+ */
 #include "linked_stack.h"
 
 #include <iostream>

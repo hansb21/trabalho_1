@@ -1,20 +1,26 @@
-#include "linked_stack.h"
+/**
+ * @file xml.cpp	
+ * @author Hans Buss, André Fernandes
+ * @brief Implementações das funções necessárias para mexer com XML.
+ *
+ */
 #include <cstddef>
 #include <string>
 
+#include "linked_stack.h"
+#include "xml.h"
+
 #define ENDPOSITION  end + 1 - start
 
-
-
-
 namespace xml {
-
+	
 bool verifier(const std::string& xml_file) {
 	
 	structures::LinkedStack<std::string> tags;
 
 	auto counter = 0u;
-
+	
+	
 	while (counter < xml_file.length()) 
 	{
 

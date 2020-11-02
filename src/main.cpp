@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @author Hans Buss, André Fernandes
+ * @brief Programa principal de leitura e validação de XML.
+ *
+ */
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -9,6 +15,14 @@
 #include "linked_stack.h"
 #include "counter.h"
 
+/**
+ * @brief Executa o programa, realiza a leitura e o processamento do xml.
+ * 
+ * @return int 
+ * 0 se o programa funcionar;
+ * 1 se não foi possível abrir o arquivo;
+ * -1 se o XML é invalido
+ */
 int main() 
 {
     using namespace std;
@@ -29,7 +43,7 @@ int main()
 	if (!verifier(xml)) 
 	{
 		cout << "error\n";
-		return -1;
+		return (-1);
 	} 	
 	
 	size_t from{0};

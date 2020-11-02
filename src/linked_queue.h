@@ -1,3 +1,9 @@
+/**
+ * @file linked_queue.h
+ * @author Hans Buss, André Fernandes
+ * @brief Declaração da linked queue.
+ * 
+ */
 #ifndef STRUCTURES_LINKED_QUEUE_H
 #define STRUCTURES_LINKED_QUEUE_H
 

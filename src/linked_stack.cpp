@@ -1,3 +1,9 @@
+/**
+ * @file linked_stack.cpp
+ * @author Hans Buss, André Fernandes
+ * @brief Implementação da linked stack.
+ * 
+ */
 template<typename T>
 LinkedStack<T>::~LinkedStack() {
 	clear();

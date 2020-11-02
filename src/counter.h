@@ -1,5 +1,6 @@
 /**
- * 
+ * @file counter.h
+ * @author Hans Buss, André Fernandes
  * @brief Declaração das funções usadas para efetuar a contagem de áreas na imagem.
  * 
  */

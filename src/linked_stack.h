@@ -1,3 +1,10 @@
+/**
+ * @file linked_stack.h
+ * @author Hans Buss, André Fernandes
+ * @brief Declaração da linked stack.
+ * 
+ */
+
 #ifndef STRUCTURES_LINKED_STACK_H
 #define STRUCTURES_LINKED_STACK_H
 
