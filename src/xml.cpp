@@ -10,7 +10,7 @@
 #include "linked_stack.h"
 #include "xml.h"
 
-#define ENDPOSITION  end + 1 - start
+#define ENDPOSITION  end + 1 - start //! Usado para deixar o código mais legivel.
 
 namespace xml {
 	
@@ -19,7 +19,6 @@ bool verifier(const std::string& xml_file) {
 	structures::LinkedStack<std::string> tags;
 
 	auto counter = 0u;
-	
 	
 	while (counter < xml_file.length()) 
 	{
@@ -30,8 +29,8 @@ bool verifier(const std::string& xml_file) {
 		if (start == std::string::npos) break;
 
 		if (end == std::string::npos) return false;
-
-		//we get the tag between the start position and the last one.
+		
+		//!recebemos a tag entre a primeira e a última posição
 		auto tag = xml_file.substr(start, ENDPOSITION);
 		counter = end + 1;
 		

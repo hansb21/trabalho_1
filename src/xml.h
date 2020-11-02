@@ -9,6 +9,7 @@
 
 #include <string>
 
+//! Funções para o uso de XML.
 namespace xml {
 	
 	
