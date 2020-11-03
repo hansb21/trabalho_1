@@ -9,36 +9,35 @@
 
 //! Funções para contar regiões na imagem.
 namespace counter {
-    
-   /** 
-     * @brief Remove os elementos na vizinhança de um array.
+    /**
+	 * @brief Remove os elementos na vizinhança de um array.
      * 
-     * @param width inteiro 
-     * @param height inteiro
+     * @param width inteiro representando largura 
+     * @param height inteiro representando largura
      * @param array de booleanos representando a matriz
      * @param pos inteiro representando a posição onde deseja remover os vizinhos
-     */
+	 */
     void clear_neighbours(int width, int height, bool array[], int pos);
     
-    /** 
-     * @brief Retorna as áreas conectadas de uma imagem.
+    /**
+	 * @brief Retorna as áreas conectadas de uma imagem.
      * 
-     * @param width inteiro
-     * @param height inteiro
+     * @param width inteiro representando largura
+     * @param height inteiro representando largura
      * @param array de booleanos representando a matriz
      * 
      * @returns inteiro representando a quantidade de areas conenctadas 
      */
     int connectivity_counter(int width, int height, bool array[]);
 
-    /** 
-     * @brief Cria uma matriz booleana a partir de uma string de '0' e '1'.
+    /**
+	 * @brief Cria uma matriz booleana a partir de uma string de '0' e '1'.
      *
-     * @param str_matrix no formato string 
-     * @param width inteiro
-     * @param height inteiro
+     * @param str_matrix string representando a matriz de 0 e 1  
+     * @param width inteiro representando largura
+     * @param height inteiro representando largura
      *
-     * @return array de booleanos representando a matriz
-     */
+     * @returns array de booleanos representando a matriz
+	 */
     bool* create_matrix(std::string str_matrix, int width, int height);
 }
