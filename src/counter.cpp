@@ -5,6 +5,7 @@
  * 
  */
 #include "linked_stack.h"
+#include "counter.h"
 
 #include <iostream>
 #include <string> 
