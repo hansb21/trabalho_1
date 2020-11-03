@@ -6,37 +6,38 @@
  */
 
 #include <string>
-
+//!  Funções usadas para comer cu de curioso
 namespace counter {
-    /* 
-	 * @brief Remove os elementos na vizinhança de um array.
+    
+   /** 
+     * @brief Remove os elementos na vizinhança de um array.
      * 
-     * @params width inteiro 
-     * @params height inteiro
-     * @params array de booleanos representando a matriz
-     * @params pos inteiro representando a posição onde deseja remover os vizinhos
-	 */
+     * @param width inteiro 
+     * @param height inteiro
+     * @param array de booleanos representando a matriz
+     * @param pos inteiro representando a posição onde deseja remover os vizinhos
+     */
     void clear_neighbours(int width, int height, bool array[], int pos);
     
-    /* 
-	 * @brief Retorna as áreas conectadas de uma imagem.
+    /** 
+     * @brief Retorna as áreas conectadas de uma imagem.
      * 
-     * @params width inteiro
-     * @params height inteiro
-     * @params array de booleanos representando a matriz
+     * @param width inteiro
+     * @param height inteiro
+     * @param array de booleanos representando a matriz
      * 
      * @returns inteiro representando a quantidade de areas conenctadas 
-	 */
+     */
     int connectivity_counter(int width, int height, bool array[]);
 
-    /* 
-	 * @brief Cria uma matriz booleana a partir de uma string de '0' e '1'.
+    /** 
+     * @brief Cria uma matriz booleana a partir de uma string de '0' e '1'.
      *
-     * @params str_matrix no formato string 
-     * @params width inteiro
-     * @params height inteiro
+     * @param str_matrix no formato string 
+     * @param width inteiro
+     * @param height inteiro
      *
      * @return array de booleanos representando a matriz
-	 */
+     */
     bool* create_matrix(std::string str_matrix, int width, int height);
 }
