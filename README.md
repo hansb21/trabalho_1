@@ -1,5 +1,8 @@
 # Trabalho de Implementação I - Processamento de XML com imagens binárias
 
+## Autores 
+Hans Buss, André Fernandes
+
 ## Objetivo
 
 Este trabalho consiste na utilização de **estruturas de dados lineares**, vistas até o momento no curso, e aplicação de conceitos de **pilha** e/ou **fila** para o processamento de arquivos **XML** contendo **imagens binárias**.
@@ -52,3 +55,21 @@ Conforme apresentado em aula, segue o algoritmo de rotulação (*labeling*) usan
   - Incrementar o `rótulo`.
 - O conteúdo final da matriz `R` corresponde ao resultado da rotulação.
 A **quantidade de componentes conexos**, que é a resposta do segundo problema, é igual ao último e **maior *rótulo* atribuído**.
+
+## Nossa Solução:
+
+Para realizar a contagem das regiões da imagem foi utilizado um algoritmo diferente do sugerido, por uma questão de familiaridade dos autores. Ele se baseia no algoritmo de flood fill e pode ser feito de maneira recursiva, mas nesse caso optou-se por implementar usando uma pilha (**LIFO**).
+Os passos realizados são os seguintes:
+  - Criar um vetor V representando a matriz de entrada
+  - Inicializa um contador com 0
+  - Percorrer cada elemento desse vetor
+    - Para cada pixel de intensidade **1** encontrado:
+      - Incrementa o contador
+      - Inserir a posição POS do pixel na pilha
+      - Enquanto a pilha não estiver vazia
+        - Remover a última posição POS da pilha
+        - O vetor na posição POS recebe **0**
+        - Adicionar na pilha cada um dos vizinhos de POS se forem iguais a **1** no vetor (nessa etapa é importante verificar se não estamos nas bordas da matriz
+  - Retorna o contador
+O valor do contador é igual ao númetro 
+
