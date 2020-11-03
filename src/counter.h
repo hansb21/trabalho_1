@@ -6,7 +6,6 @@
  */
 
 #include <string>
-//!  Funções usadas para comer cu de curioso
 namespace counter {
     
    /** 

@@ -10,7 +10,7 @@
 #include "linked_stack.h"
 #include "xml.h"
 
-#define ENDPOSITION  end + 1 - start //! Usado para deixar o código mais legivel.
+#define ENDPOSITION  end + 1 - start //! @brief  Usado para deixar o código mais legivel.
 
 namespace xml {
 	

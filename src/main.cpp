@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @author Hans Buss, André Fernandes
- * @brief Programa principal de leitura e validação de XML.
+ * @brief Código main do programa de leitura e validação de XML, além do processamento dos mesmos.
  *
  */
 #include <iostream>
@@ -18,16 +18,15 @@
 /**
  * @brief Executa o programa, realiza a leitura e o processamento do xml.
  * 
- * @return int 
- * 0 se o programa funcionar;
- * 1 se não foi possível abrir o arquivo;
- * -1 se o XML é invalido
+ * @return 0 se o programa funcionar;
+ * @return 1 se não foi possível abrir o arquivo;
+ * @return -1 se o XML é invalido
  */
 int main() 
 {
     using namespace std;
     using namespace xml;
-	using namespace counter;
+    using namespace counter;
 
     char xmlfilename[100];
     cin.getline(xmlfilename, 100);
