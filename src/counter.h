@@ -6,6 +6,8 @@
  */
 
 #include <string>
+
+//! Funções para contar regiões na imagem.
 namespace counter {
     
    /** 

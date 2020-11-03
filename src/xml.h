@@ -9,7 +9,7 @@
 
 #include <string>
 
-//! Funções para o uso de XML.
+//! Funções para o a validação e a extração de dados de XML.
 namespace xml {
 	
 	
